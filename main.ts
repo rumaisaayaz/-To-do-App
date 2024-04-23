@@ -57,16 +57,15 @@ while (!shouldExit) {
         message: "edit task:",
       },
     ]);
-      // Replace the chosen task with the updated task
-      const index = list.indexOf(update.change);
-      if (index !== -1) {
-          list[index] = update.updatedTask;
-      }
-  
-      // Display the updated list
-      console.log("Updated Task List:");
-      list.forEach(task => console.log(task));
-  ;
+    // Replace the chosen task with the updated task
+    const index = list.indexOf(update.change);
+    if (index !== -1) {
+      list[index] = update.updatedTask;
+    }
+
+    // Display the updated list
+    console.log("Updated Task List:");
+    list.forEach((task) => console.log(task));
 
     // var updatedtask = update.change;
     // // updatedtask.pop()
@@ -83,15 +82,15 @@ while (!shouldExit) {
           message: chalk.yellow("Select to update"),
           choices: list,
         },
-      ])
+      ]);
       const index = list.indexOf(cut.change);
       if (index !== -1) {
         list.splice(index, 1);
-    }
+      }
       console.log("View all Tasks to see the Updated list ⬇ ");
       // VIEW ALL
     }
-   } else if (choice === "View All Tasks") {
+  } else if (choice === "View All Tasks") {
     console.log(chalk.bgCyan.blackBright.bold("All Tasks"));
     list.forEach((task, index) =>
       console.log(chalk.blueBright(`${index + 1}.${task}`))
@@ -107,7 +106,7 @@ while (!shouldExit) {
     const index = list.indexOf(done.done);
     if (index !== -1) {
       list.splice(index, 1);
-  }
+    }
     console.log(chalk.bgGreen.blue(`Task ${done.done},is completed ✅`));
   }
   // EXIT
