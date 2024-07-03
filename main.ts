@@ -67,12 +67,7 @@ while (!shouldExit) {
     console.log("Updated Task List:");
     list.forEach((task) => console.log(task));
 
-    // var updatedtask = update.change;
-    // // updatedtask.pop()
-    // let edited = update.updatedTask;
-    // list.push(edited);
-    // list.push();
-    // DELETE TASK
+        // DELETE TASK
   } else if (choice === "Delete Task") {
     {
       const cut = await inquirer.prompt([
